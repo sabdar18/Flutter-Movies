@@ -1,0 +1,4 @@
+
+
+
+const String HOME_TITLE ="FLUTTER MOVIES";
