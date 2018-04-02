@@ -13,18 +13,6 @@ class HomePage extends StatefulWidget{
 }
 
 class HomePageState extends State<HomePage>{
-
-
-  void init(){
-    MyNetwork.getRequest(MyNetwork.MOVIES_URL).then(
-      (res) {
-        setState((){
-          print(res);
-        });
-      }
-    );
-  }
-
   _buildHomePage(){
     return new Center(
       child: new Text(
@@ -32,6 +20,7 @@ class HomePageState extends State<HomePage>{
       ),
     );
   }
+  
   @override
   Widget build(BuildContext context) {
     return new Scaffold(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_movies/pages/home.dart';
 
 
-void main()=>  new MyApp();
+void main() => runApp(new MyApp());
 
 
 class MyApp  extends StatelessWidget{
