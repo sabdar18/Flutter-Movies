@@ -11,7 +11,7 @@ class MyApp  extends StatelessWidget{
     return new MaterialApp(
       title: "Hello Movies",
       home: new HomePage(),
-      // debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: Theme.of(context).copyWith(primaryColor: Colors.pink),
     );
   }

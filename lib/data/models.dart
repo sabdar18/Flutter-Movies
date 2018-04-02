@@ -5,7 +5,6 @@ import 'package:flutter_movies/routes.dart';
 
 class MenuItem{
   MenuItem(this.title, this.icon, this.route,this.selected, this.enabled);
-
   final String title;
   final Icon icon;
   final String route;
@@ -31,4 +30,22 @@ class MenuData {
     return menuItems;
   }
 
+}
+
+class AppBarData {
+  static List<String> appBarItems = new List<String>();
+
+  static _intAppBar(){
+    appBarItems.add("HOME");
+    appBarItems.add("TV");
+    appBarItems.add("MUSIC");
+    appBarItems.add("LANGUAGES");
+    appBarItems.add("CLIPS");
+    appBarItems.add("GENRE");
+  }
+
+  static List<String> getAppBarList(){
+    if(appBarItems.length ==0) _intAppBar();
+    return appBarItems;
+  }
 }
