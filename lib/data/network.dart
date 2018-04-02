@@ -1,6 +1,6 @@
 import 'dart:async';
-
-import 'dart:io';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 
 
@@ -22,12 +22,12 @@ import 'dart:io';
    static const String IMAGE_SIZE_W500 = IMAGE_PATH+ "w500/";
    static const String IMAGE_SIZE_ORIGINAL = IMAGE_PATH +"original/";
 
-  static Future<List> getRequest(String urlString) async{
+  static Future<String> getRequest(String urlString) async{
     String url = urlString + "?api_key=" + AUTH_KEY ;
-     var httpClient = new HttpClient();
-     var request = await httpClient.getUrl(Uri.parse(url));
-     var response = request.close();
-    return response.asStream().toList();
+     var client = new http.Client();
+     var request = await client.get(Uri.parse(url));
+     var response =request.body;
+    return response;
   }
  
   
