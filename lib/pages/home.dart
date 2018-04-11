@@ -92,26 +92,28 @@ class HomePageState extends State<HomePage> {
     return showDialog(
         context: context,
         barrierDismissible: false,
-        child: new AlertDialog(
-          title: new Text('Search Alert'),
-          content: new SingleChildScrollView(
-            child: new ListBody(
-              children: <Widget>[
-                new Text("hello Search"),
-                new Text("hello Search"),
-                new Text("hello Search"),
-              ],
+        builder: (BuildContext context) {
+          return new AlertDialog(
+            title: new Text('Search Alert'),
+            content: new SingleChildScrollView(
+              child: new ListBody(
+                children: <Widget>[
+                  new Text("hello Search"),
+                  new Text("hello Search"),
+                  new Text("hello Search"),
+                ],
+              ),
             ),
-          ),
-          actions: <Widget>[
-            new FlatButton(
-              child: new Text("DISMISS"),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            )
-          ],
-        ));
+            actions: <Widget>[
+              new FlatButton(
+                child: new Text("DISMISS"),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              )
+            ],
+          );
+        });
   }
 
   @override
