@@ -41,7 +41,7 @@ updateMenuItems(MenuItem menuItem){
              selected: menuItem.selected ?? false,
               leading: menuItem.icon,
               title: new Text(menuItem.title,
-               style: new TextStyle(fontSize: 18.0),
+              
                ),
               onTap: (() {
                 updateMenuItems(menuItem);
